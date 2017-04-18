@@ -74,10 +74,10 @@ CREATE TABLE representative(
 ) DEFAULT CHARSET=utf8;
 
 CREATE TABLE student(
-    id          INT            NOT NULL,
+    id          INT            NOT NULL AUTO_INCREMENT,
     surname     VARCHAR(30)    NOT NULL,
     name        VARCHAR(30)    NOT NULL,
-    sex         ENUM ('М','Ж') NOT NULL,
+    sex         ENUM ('Male','Female') NOT NULL,
     birthday    DATE           NOT NULL,
     nationality VARCHAR(30)    NOT NULL,
     address     VARCHAR(30)    NOT NULL,
@@ -88,7 +88,7 @@ CREATE TABLE student(
 ) DEFAULT CHARSET=utf8;
 
 CREATE TABLE relative(
-    id          INT            NOT NULL,
+    id          INT            NOT NULL ,
     surname     VARCHAR(30)    NOT NULL,
     name        VARCHAR(30)    NOT NULL,
     rodstvo     VARCHAR(30)    NOT NULL,
